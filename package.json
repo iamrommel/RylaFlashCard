@@ -1,0 +1,42 @@
+{
+  "name": "RyalFlashCard",
+  "version": "0.1.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "dev": "node ./.scripts  && expo start -c",
+    "build:dev": "node ./.scripts && build.sh",
+    "test": "mocha --require ./mocha-register.js  --timeout 10000  --colors ./src/**/*.spec.js",
+    "test:watch": "mocha --require ./mocha-register.js  --timeout 10000 --colors --watch ./src/**/*.spec.js",
+    "deploy": "rimraf ./.expo && cross-env NODE_ENV=production node ./.scripts && bash publish.sh production",
+    "deploy:beta": "cross-env NODE_ENV=beta node ./.scripts && publish.sh beta",
+    "build:a:beta": "cross-env NODE_ENV=beta node ./.scripts --addVersionCode=true && expo build:android --release-channel beta",
+    "build:a": "cross-env NODE_ENV=production node ./.scripts --addVersionCode=true  && expo build:android --release-channel production -t app-bundle",
+    "build:i": "cross-env NODE_ENV=production node ./.scripts && expo build:ios --release-channel production",
+    "prettier": "prettier --write \"src/**/*.js\""
+  },
+  "dependencies": {
+    "expo": "^35.0.0",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-web": "^0.11.7",
+    "lodash": "4.17.15",
+    "moment": "2.24.0"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^7.1.0",
+    "eslint": "^6.7.2",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "rimraf": "^3.0.0",
+    "yargs": "^14.2.2",
+    "chalk": "^2.4.2"
+  },
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

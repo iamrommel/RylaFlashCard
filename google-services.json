@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "606862686868",
+    "firebase_url": "https://rylaflashcard.firebaseio.com",
+    "project_id": "rylaflashcard",
+    "storage_bucket": "rylaflashcard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606862686868:android:e0f931343b23fd4a949281",
+        "android_client_info": {
+          "package_name": "ph.lsf.rylaflashcard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606862686868-lctl9ou3ju4g30t8qonbvl96opadmtom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpYUkLTCX-Ak5xCk93t4KZKNBZdyYxoEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606862686868-lctl9ou3ju4g30t8qonbvl96opadmtom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
