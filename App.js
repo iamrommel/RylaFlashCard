@@ -29,10 +29,11 @@ export default function App() {
   }, [])
 
   return (
-    <StyleProvider style={getTheme(commonColor)}>
-      <Container style={{ marginTop: StatusBar.currentHeight }}>
+    <React.Fragment>
+      <StatusBar hidden />
+      <StyleProvider style={getTheme(commonColor)}>
         <AppNavigator />
-      </Container>
-    </StyleProvider>
+      </StyleProvider>
+    </React.Fragment>
   )
 }
