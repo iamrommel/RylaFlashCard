@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { StyleProvider } from 'native-base'
+import { StyleProvider, Container } from 'native-base'
 import getTheme from './native-base-theme/components'
 import commonColor from './native-base-theme/variables/commonColor'
+import { StatusBar } from 'react-native'
 import { loadAsync } from 'expo-font'
 import { logToSentry } from './src/config/sentry'
 import AppNavigator from './src/AppNavigator'
@@ -29,7 +30,9 @@ export default function App() {
 
   return (
     <StyleProvider style={getTheme(commonColor)}>
-      <AppNavigator />
+      <Container style={{ marginTop: StatusBar.currentHeight }}>
+        <AppNavigator />
+      </Container>
     </StyleProvider>
   )
 }
