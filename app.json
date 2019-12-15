@@ -3,7 +3,7 @@
     "name": "Ryla Flash Card",
     "slug": "RylaFlashCard",
     "privacy": "public",
-    "sdkVersion": "35.0.0",
+    "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
     "version": "0.1.0",
     "orientation": "portrait",
